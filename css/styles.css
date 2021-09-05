@@ -15,7 +15,6 @@
   box-sizing: border-box;
 }
 
-
 /* typography */
 
 ::selection {
@@ -213,7 +212,7 @@ a {
   margin: 1rem 0;
   outline: 0;
   text-align: center;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -305,6 +304,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -612,6 +612,7 @@ a {
   overflow: hidden;
   transition: all 0.3s;
   opacity: 0;
+  line-height: 4rem;
 }
 
 .collapsible--expanded .collapsible__chevron {
@@ -631,6 +632,7 @@ a {
 
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .block__heading {
@@ -664,6 +666,7 @@ a {
 }
 
 /* Navigation Bar */
+
 .nav {
   background: #000;
   display: flex;
@@ -724,8 +727,9 @@ a {
   }
 
   .nav__item {
-    border: 0;
+    border-bottom: none;
   }
+  
 }
 
 
@@ -761,9 +765,14 @@ a {
   max-width: 670px;
 }
 
+.block-domain {
+  padding-bottom: 0;
+}
+
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
@@ -804,7 +813,7 @@ a {
 }
 
 .feature__image {
-  widows: 100%;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -831,4 +840,91 @@ a {
     width: auto;
     max-width: 700px;
   }
+}
+
+
+/* Footer */
+.footer {
+  background: #232323;
+  padding-top: 10rem;
+}
+
+.footer a {
+  color: #777;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer__section {
+  padding: 2rem;
+  border-bottom: 1px solid #393939;
+}
+
+.footer__section .list {
+  margin: 0;
+}
+
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer__brand {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.footer__brand img {
+  width: 100%;
+  max-width: 320px;
+}
+
+.footer__copyright {
+  font-size: 2.1rem;
+  color: #fff;
+  opacity: 0.3;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1.5rem;
+  }
+
+  .footer__sections {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+
+  .footer .collapsible__chevron {
+    display: none;
+  }
+
+  .footer .collapsible__content {
+    opacity: 1;
+    max-height: 100%;
+  }
+
+  .footer__brand {
+    order: -1;
+    margin-top: 1rem;
+  }
+
+  .footer__copyright {
+    font-size: 1.5rem;
+  }
+
+  .footer__section {
+    border: 0;
+  }
+
+  .footer__heading {
+    font-size: 1.6rem;
+  }
+}
+
+/* Signup Callout */
+.callout-signup {
+  transform: translateY(5rem);
 }
